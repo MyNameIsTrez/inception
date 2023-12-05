@@ -1,97 +1,114 @@
 <!DOCTYPE html>
 <!-- saved from url=(0050)https://rphlr.github.io/42-Evals/Cursus/Inception/ -->
-<html lang="en" data-darkreader-mode="filter"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="chrome-extension://hmflgigeigiejaogcgamkecmlibcpdgo/generic/inject.js"></script>
+<html lang="en" data-darkreader-mode="filter">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="chrome-extension://hmflgigeigiejaogcgamkecmlibcpdgo/generic/inject.js"></script>
 
 
-  
-  <meta content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" name="viewport">
+
+  <meta
+    content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"
+    name="viewport">
   <title>inception correction</title>
-  <link rel="shortcut icon" href="https://rphlr.github.io/42-Evals/assets/favicons/favicon_no-bg.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://rphlr.github.io/42-Evals/assets/favicons/favicon_no-bg.ico"
+    type="image/x-icon">
   <link href="./evaluation_files/styles.css" media="all" rel="stylesheet">
   <link rel="manifest" href="https://rphlr.github.io/42-Evals/manifest.json">
-<style id="dark-reader-style" class="darkreader" type="text/css">@media screen {
+  <style id="dark-reader-style" class="darkreader" type="text/css">
+    @media screen {
 
-/* Leading rule */
-html {
-  -webkit-filter: invert(100%) hue-rotate(180deg) contrast(85%) !important;
-  filter: invert(100%) hue-rotate(180deg) contrast(85%) !important;
-}
+      /* Leading rule */
+      html {
+        -webkit-filter: invert(100%) hue-rotate(180deg) contrast(85%) !important;
+        filter: invert(100%) hue-rotate(180deg) contrast(85%) !important;
+      }
 
-/* Reverse rule */
-img,
-video,
-:not(object):not(body)>embed,
-object,
-svg image,
-[style*="background:url"],
-[style*="background-image:url"],
-[style*="background: url"],
-[style*="background-image: url"],
-[background],
-twitterwidget,
-.sr-reader,
-.sr-backdrop,
-iframe:fullscreen,
-[class="opinary-iframe"] {
-  -webkit-filter: invert(100%) hue-rotate(180deg) !important;
-  filter: invert(100%) hue-rotate(180deg) !important;
-}
-[style*="background:url"] *,
-[style*="background-image:url"] *,
-[style*="background: url"] *,
-[style*="background-image: url"] *,
-input,
-[background] *,
-img[src^="https://s0.wp.com/latex.php"],
-twitterwidget .NaturalImage-image {
-  -webkit-filter: none !important;
-  filter: none !important;
-}
-.compatibility-with-darkreader-below-4-3-3 {
-  background: white !important;
-}
+      /* Reverse rule */
+      img,
+      video,
+      :not(object):not(body)>embed,
+      object,
+      svg image,
+      [style*="background:url"],
+      [style*="background-image:url"],
+      [style*="background: url"],
+      [style*="background-image: url"],
+      [background],
+      twitterwidget,
+      .sr-reader,
+      .sr-backdrop,
+      iframe:fullscreen,
+      [class="opinary-iframe"] {
+        -webkit-filter: invert(100%) hue-rotate(180deg) !important;
+        filter: invert(100%) hue-rotate(180deg) !important;
+      }
 
-/* Text contrast */
-html {
-  text-shadow: 0 0 0 !important;
-}
+      [style*="background:url"] *,
+      [style*="background-image:url"] *,
+      [style*="background: url"] *,
+      [style*="background-image: url"] *,
+      input,
+      [background] *,
+      img[src^="https://s0.wp.com/latex.php"],
+      twitterwidget .NaturalImage-image {
+        -webkit-filter: none !important;
+        filter: none !important;
+      }
 
-/* Full screen */
-:-webkit-full-screen, :-webkit-full-screen * {
-  -webkit-filter: none !important;
-  filter: none !important;
-}
-:-moz-full-screen, :-moz-full-screen * {
-  -webkit-filter: none !important;
-  filter: none !important;
-}
-:fullscreen, :fullscreen * {
-  -webkit-filter: none !important;
-  filter: none !important;
-}
+      .compatibility-with-darkreader-below-4-3-3 {
+        background: white !important;
+      }
 
-/* Page background */
-html {
-  background: rgb(255,255,255) !important;
-}
+      /* Text contrast */
+      html {
+        text-shadow: 0 0 0 !important;
+      }
 
-/* Custom rules */
-.compatibility-with-darkreader-below-4-3-3 {
-    background: white !important;
-}
+      /* Full screen */
+      :-webkit-full-screen,
+      :-webkit-full-screen * {
+        -webkit-filter: none !important;
+        filter: none !important;
+      }
 
-}</style></head>
+      :-moz-full-screen,
+      :-moz-full-screen * {
+        -webkit-filter: none !important;
+        filter: none !important;
+      }
+
+      :fullscreen,
+      :fullscreen * {
+        -webkit-filter: none !important;
+        filter: none !important;
+      }
+
+      /* Page background */
+      html {
+        background: rgb(255, 255, 255) !important;
+      }
+
+      /* Custom rules */
+      .compatibility-with-darkreader-below-4-3-3 {
+        background: white !important;
+      }
+
+    }
+  </style>
+</head>
 
 <body class="vsc-initialized">
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('../../js/service-worker.js')
-      .then(function(registration) {
-        console.log('Service Worker registered successfully:', registration);
-      })
-      .catch(function(error) {
-        console.log('Service Worker registration failed:', error);
-      });
+        .then(function (registration) {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch(function (error) {
+          console.log('Service Worker registration failed:', error);
+        });
     }
   </script>
   <span class="menu">
@@ -109,7 +126,10 @@ html {
 
         <hr>
         <div class="p-0 scale-introduction dancer from-down" id="introduction-24651">
-          <h3 class="font-weight-bold mb-1 glfh_headerContainer">Introduction<div class="glfh_linkContainer"><a href="https://rphlr.github.io/42-Evals/Cursus/Inception/#introduction-24651" title="Copy link to clipboard">🔗</a></div></h3>
+          <h3 class="font-weight-bold mb-1 glfh_headerContainer">Introduction<div class="glfh_linkContainer"><a
+                href="https://rphlr.github.io/42-Evals/Cursus/Inception/#introduction-24651"
+                title="Copy link to clipboard">🔗</a></div>
+          </h3>
           <p>
             Please comply with the following rules:<br><br>- Remain polite, courteous, respectful and constructive
             throughout the <br> evaluation process. The well-being of the community depends on it.<br><br>- Identify
@@ -121,7 +141,10 @@ html {
           </p>
         </div>
         <div class="p-0 scale-guidelines dancer from-down" id="guidelines-24651">
-          <h3 class="font-weight-bold mb-1 glfh_headerContainer">Guidelines<div class="glfh_linkContainer"><a href="https://rphlr.github.io/42-Evals/Cursus/Inception/#guidelines-24651" title="Copy link to clipboard">🔗</a></div></h3>
+          <h3 class="font-weight-bold mb-1 glfh_headerContainer">Guidelines<div class="glfh_linkContainer"><a
+                href="https://rphlr.github.io/42-Evals/Cursus/Inception/#guidelines-24651"
+                title="Copy link to clipboard">🔗</a></div>
+          </h3>
           <p>
             - Only grade the work that was turned in the Git repository of the evaluated <br> student or group.<br><br>-
             Double-check that the Git repository belongs to the student(s). Ensure that <br> the project is the one
@@ -140,7 +163,10 @@ html {
 
         <hr>
         <div class="dancer from-down" id="attachments-24651">
-          <h3 class="font-weight-bold mb-1 glfh_headerContainer">Attachments<div class="glfh_linkContainer"><a href="https://rphlr.github.io/42-Evals/Cursus/Inception/#attachments-24651" title="Copy link to clipboard">🔗</a></div></h3>
+          <h3 class="font-weight-bold mb-1 glfh_headerContainer">Attachments<div class="glfh_linkContainer"><a
+                href="https://rphlr.github.io/42-Evals/Cursus/Inception/#attachments-24651"
+                title="Copy link to clipboard">🔗</a></div>
+          </h3>
           <div class="project-attachments-list">
           </div>
 
@@ -156,7 +182,11 @@ html {
         </div>
 
       </div>
-      <form class="simple_form form-horizontal" novalidate="novalidate" id="edit_scale_team_5430439" action="https://projects.intra.42.fr/projects/inception/project_sessions/5815/evaluations/3607/scales/24651/scale_teams/5430439" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="Zhxzz1zTdGwmIzPz0GvGtEXLg/HBgsHnUBjxx/KnWmYjIoUeTpqCqYIW46fyNIWKfudOFs5/Qo61p0w3IO+JYw==">
+      <form class="simple_form form-horizontal" novalidate="novalidate" id="edit_scale_team_5430439"
+        action="https://projects.intra.42.fr/projects/inception/project_sessions/5815/evaluations/3607/scales/24651/scale_teams/5430439"
+        accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden"
+          name="_method" value="patch"><input type="hidden" name="authenticity_token"
+          value="Zhxzz1zTdGwmIzPz0GvGtEXLg/HBgsHnUBjxx/KnWmYjIoUeTpqCqYIW46fyNIWKfudOFs5/Qo61p0w3IO+JYw==">
         <div class="scale-section-answers col-sm-12 scale-div">
           <section class="scale-section-item dancer from-down" id="section-69363">
             <div class="section-header">
@@ -183,19 +213,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][0][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][0][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234803" name="[scale_team][answers_attributes][0][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234803"
+                    name="[scale_team][answers_attributes][0][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][0][value]" id="radio_[scale_team][answers_attributes][0]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][0]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][0][value]"
+                  id="radio_[scale_team][answers_attributes][0]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][0]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][0][value]" id="radio_[scale_team][answers_attributes][0]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][0]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][0][value]"
+                  id="radio_[scale_team][answers_attributes][0]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][0]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -246,19 +283,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][1][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][1][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234804" name="[scale_team][answers_attributes][1][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234804"
+                    name="[scale_team][answers_attributes][1][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][1][value]" id="radio_[scale_team][answers_attributes][1]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][1]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][1][value]"
+                  id="radio_[scale_team][answers_attributes][1]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][1]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][1][value]" id="radio_[scale_team][answers_attributes][1]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][1]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][1][value]"
+                  id="radio_[scale_team][answers_attributes][1]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][1]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -294,19 +338,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][2][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][2][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234805" name="[scale_team][answers_attributes][2][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234805"
+                    name="[scale_team][answers_attributes][2][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][2][value]" id="radio_[scale_team][answers_attributes][2]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][2]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][2][value]"
+                  id="radio_[scale_team][answers_attributes][2]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][2]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][2][value]" id="radio_[scale_team][answers_attributes][2]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][2]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][2][value]"
+                  id="radio_[scale_team][answers_attributes][2]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][2]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -331,19 +382,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][3][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][3][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234806" name="[scale_team][answers_attributes][3][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234806"
+                    name="[scale_team][answers_attributes][3][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][3][value]" id="radio_[scale_team][answers_attributes][3]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][3]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][3][value]"
+                  id="radio_[scale_team][answers_attributes][3]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][3]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][3][value]" id="radio_[scale_team][answers_attributes][3]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][3]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][3][value]"
+                  id="radio_[scale_team][answers_attributes][3]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][3]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -374,19 +432,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][4][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][4][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234807" name="[scale_team][answers_attributes][4][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234807"
+                    name="[scale_team][answers_attributes][4][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][4][value]" id="radio_[scale_team][answers_attributes][4]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][4]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][4][value]"
+                  id="radio_[scale_team][answers_attributes][4]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][4]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][4][value]" id="radio_[scale_team][answers_attributes][4]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][4]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][4][value]"
+                  id="radio_[scale_team][answers_attributes][4]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][4]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -408,19 +473,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][5][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][5][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234808" name="[scale_team][answers_attributes][5][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234808"
+                    name="[scale_team][answers_attributes][5][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][5][value]" id="radio_[scale_team][answers_attributes][5]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][5]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][5][value]"
+                  id="radio_[scale_team][answers_attributes][5]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][5]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][5][value]" id="radio_[scale_team][answers_attributes][5]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][5]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][5][value]"
+                  id="radio_[scale_team][answers_attributes][5]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][5]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -448,19 +520,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][6][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][6][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234809" name="[scale_team][answers_attributes][6][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234809"
+                    name="[scale_team][answers_attributes][6][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][6][value]" id="radio_[scale_team][answers_attributes][6]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][6]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][6][value]"
+                  id="radio_[scale_team][answers_attributes][6]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][6]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][6][value]" id="radio_[scale_team][answers_attributes][6]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][6]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][6][value]"
+                  id="radio_[scale_team][answers_attributes][6]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][6]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -492,19 +571,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][7][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][7][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234810" name="[scale_team][answers_attributes][7][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234810"
+                    name="[scale_team][answers_attributes][7][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][7][value]" id="radio_[scale_team][answers_attributes][7]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][7]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][7][value]"
+                  id="radio_[scale_team][answers_attributes][7]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][7]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][7][value]" id="radio_[scale_team][answers_attributes][7]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][7]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][7][value]"
+                  id="radio_[scale_team][answers_attributes][7]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][7]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -532,19 +618,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][8][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][8][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234811" name="[scale_team][answers_attributes][8][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234811"
+                    name="[scale_team][answers_attributes][8][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][8][value]" id="radio_[scale_team][answers_attributes][8]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][8]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][8][value]"
+                  id="radio_[scale_team][answers_attributes][8]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][8]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][8][value]" id="radio_[scale_team][answers_attributes][8]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][8]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][8][value]"
+                  id="radio_[scale_team][answers_attributes][8]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][8]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -566,19 +659,26 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][9][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][9][id]"
+                    type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234812" name="[scale_team][answers_attributes][9][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234812"
+                    name="[scale_team][answers_attributes][9][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="btn-group block">
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][9][value]" id="radio_[scale_team][answers_attributes][9]_true" type="radio" value="1">
-                <label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][9]_true">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][9][value]"
+                  id="radio_[scale_team][answers_attributes][9]_true" type="radio" value="1">
+                <label class="btn btn-success checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][9]_true">
                   <span class="icon-check"></span>
                   Yes
                 </label>
-                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][9][value]" id="radio_[scale_team][answers_attributes][9]_false" type="radio" value="0" checked="checked">
-                <label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][9]_false">
+                <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][9][value]"
+                  id="radio_[scale_team][answers_attributes][9]_false" type="radio" value="0" checked="checked">
+                <label class="btn btn-danger checkbox-label light-bg"
+                  for="radio_[scale_team][answers_attributes][9]_false">
                   <span class="icon-times"></span>
                   No
                 </label>
@@ -607,53 +707,73 @@ html {
             <p></p>
             <div class="scale-question-answers">
               <div class="form-group hidden scale_team_answer_id">
-                <div class="col-sm-10"><input class="form-control hidden" name="[scale_team][answers_attributes][10][id]" type="hidden" id="scale_team_answer_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden"
+                    name="[scale_team][answers_attributes][10][id]" type="hidden" id="scale_team_answer_id"></div>
               </div>
               <div class="form-group hidden scale_team_answer_question_id">
-                <div class="col-sm-10"><input class="form-control hidden" value="234813" name="[scale_team][answers_attributes][10][question_id]" type="hidden" id="scale_team_answer_question_id"></div>
+                <div class="col-sm-10"><input class="form-control hidden" value="234813"
+                    name="[scale_team][answers_attributes][10][question_id]" type="hidden"
+                    id="scale_team_answer_question_id"></div>
               </div>
               <div class="marked-title text-center">Rate it from 0 (failed) through 5 (excellent)</div>
-              <input autocomplete="off" class="star-range" data-star-range="" max="5" name="[scale_team][answers_attributes][10][value]" step="1" type="range" value="0" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0"><div class="rangeslider__fill" style="width: 20px;"></div><div class="rangeslider__handle" style="left: 0px;"></div></div>
+              <input autocomplete="off" class="star-range" data-star-range="" max="5"
+                name="[scale_team][answers_attributes][10][value]" step="1" type="range" value="0"
+                style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
+              <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0">
+                <div class="rangeslider__fill" style="width: 20px;"></div>
+                <div class="rangeslider__handle" style="left: 0px;"></div>
+              </div>
               <hr>
             </div>
           </section>
         </div>
         <div class="col-sm-12 scale-div pb-4">
           <div class="dancer from-down" id="ratings-24651">
-            <h3 class="font-weight-bold mb-1 glfh_headerContainer">Ratings<div class="glfh_linkContainer"><a href="https://rphlr.github.io/42-Evals/Cursus/Inception/#ratings-24651" title="Copy link to clipboard">🔗</a></div></h3>
+            <h3 class="font-weight-bold mb-1 glfh_headerContainer">Ratings<div class="glfh_linkContainer"><a
+                  href="https://rphlr.github.io/42-Evals/Cursus/Inception/#ratings-24651"
+                  title="Copy link to clipboard">🔗</a></div>
+            </h3>
             <p class="marked-title">Don’t forget to check the flag corresponding to the defense</p>
             <div class="btn-group block flags-buttons" data-radio-item="flag-small">
-              <label class="btn btn-default btn-success label_flag_ok on-active positive" for="scale_team_flag_id_1" name="scale_team[flag_id]">
+              <label class="btn btn-default btn-success label_flag_ok on-active positive" for="scale_team_flag_id_1"
+                name="scale_team[flag_id]">
                 <span class="iconf-check-4"></span>
                 Ok
               </label>
-              <label class="btn btn-default btn-success label_flag_outstanding_project on-active positive" for="scale_team_flag_id_9" name="scale_team[flag_id]">
+              <label class="btn btn-default btn-success label_flag_outstanding_project on-active positive"
+                for="scale_team_flag_id_9" name="scale_team[flag_id]">
                 <span class="iconf-star-1"></span>
                 Outstanding project
               </label>
             </div>
             <div class="btn-group block flags-buttons" data-radio-item="flag-small">
-              <label class="btn btn-danger btn-default label_flag_empty_work negative on-active" for="scale_team_flag_id_2" name="scale_team[flag_id]">
+              <label class="btn btn-danger btn-default label_flag_empty_work negative on-active"
+                for="scale_team_flag_id_2" name="scale_team[flag_id]">
                 <span class="iconf-iconf-folder-1"></span>
                 Empty work
               </label>
-              <label class="btn btn-danger btn-default label_flag_incomplete_work negative on-active" for="scale_team_flag_id_3" name="scale_team[flag_id]">
+              <label class="btn btn-danger btn-default label_flag_incomplete_work negative on-active"
+                for="scale_team_flag_id_3" name="scale_team[flag_id]">
                 <span class="iconf-file-attention"></span>
                 Incomplete work
               </label>
-              <label class="btn btn-danger btn-default label_flag_cheat negative on-active" for="scale_team_flag_id_7" name="scale_team[flag_id]">
+              <label class="btn btn-danger btn-default label_flag_cheat negative on-active" for="scale_team_flag_id_7"
+                name="scale_team[flag_id]">
                 <span class="iconf-layers"></span>
                 Cheat
               </label>
-              <label class="btn btn-danger btn-default label_flag_crash negative on-active" for="scale_team_flag_id_8" name="scale_team[flag_id]">
+              <label class="btn btn-danger btn-default label_flag_crash negative on-active" for="scale_team_flag_id_8"
+                name="scale_team[flag_id]">
                 <span class="iconf-bomb"></span>
                 Crash
               </label>
-              <label class="btn btn-danger btn-default label_flag_concerning_situation negative on-active" for="scale_team_flag_id_11" name="scale_team[flag_id]">
+              <label class="btn btn-danger btn-default label_flag_concerning_situation negative on-active"
+                for="scale_team_flag_id_11" name="scale_team[flag_id]">
                 <span class="iconf-alert-2"></span>
                 Concerning situation
               </label>
-              <label class="btn btn-danger btn-default label_flag_can’t_support_/_explain_code negative on-active" for="scale_team_flag_id_14" name="scale_team[flag_id]">
+              <label class="btn btn-danger btn-default label_flag_can’t_support_/_explain_code negative on-active"
+                for="scale_team_flag_id_14" name="scale_team[flag_id]">
                 <span class="iconf-bubble-attention-4"></span>
                 Can’t support / explain code
               </label>
@@ -666,11 +786,16 @@ html {
           <br>
         </div>
         <div class="scale-final-submit"><a href="https://github.com/rphlr/42-Evals">
-            <input class="btn btn-primary btn-block font-weight-bold" type="button" value="Give this repository a star. ⭐"></a>
+            <input class="btn btn-primary btn-block font-weight-bold" type="button"
+              value="Give this repository a star. ⭐"></a>
         </div>
       </form>
       <script src="./evaluation_files/js"></script>
       <script src="./evaluation_files/main.js"></script>
 
 
-</div></div></body></html>
+    </div>
+  </div>
+</body>
+
+</html>
