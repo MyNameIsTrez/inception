@@ -1,7 +1,7 @@
 FROM debian:bullseye
 
 # Install nginx
-RUN apt update
+RUN apt update -y && apt upgrade -y
 RUN apt install -y\
 	nginx\
 	openssl
@@ -19,5 +19,5 @@ RUN chmod 755 /var/www/html
 # TODO: Try to remove this:
 RUN chown -R www-data:www-data /var/www/html
 
-# Run nginx in the foreground so the container does not stop
+# Run nginx in the foreground so the container doesn't stop
 CMD [ "nginx", "-g", "daemon off;" ]
