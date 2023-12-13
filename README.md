@@ -15,12 +15,19 @@ VM password is `aabc`
 - `sudo docker image prune` to remove images with REPOSITORY and TAG `<none>`
 - `sudo docker image rm nginx` to remove the image with REPOSITORY `nginx`
 - `sudo docker ps -a` to list running containers
-- `sudo docker run <image name>` to create and run a new container from an image
 - `sudo docker run -it --rm <image name>` to create and run a new container from an image, where the terminal attaches its stdin and a TTY is allocated, and the container is automatically removed when it exits
 - `sudo docker start 7e` restarts an existing container `7e`
 - `sudo docker attach 7e` attaches to a running container `7e`
 - `sudo docker stop 7e` to stop the container `7e`
 - `sudo docker rm <CONTAINER ID>` to remove the container `7e`
+
+# MariaDB
+
+- `mariadb -e "CREATE DATABASE IF NOT EXISTS FOO;"` creates a database `FOO`
+- `mariadb -u root` logs in as root in mariadb
+- `/etc/init.d/mariadb start` to manually run mariadb in the background
+- `show databases;` to list all databases
+- `show warnings;` right after a command that printed `1 warning` in order to view the warning
 
 # Steps the inception tutorial didn't cover
 
