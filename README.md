@@ -42,5 +42,6 @@ VM password is `aabc`
 
 # Steps the inception tutorial didn't cover
 
-1. Installing ssh with `apt install openssh-server`
-2. Needing `events` and `http` directives in `nginx.conf`
+1. Installing ssh with `usermod -a -G sudo sbos`, and restart the VM for the change to take effect
+2. Installing ssh with `apt install openssh-server`
+3. Needing `events` and `http` directives in `nginx.conf`
