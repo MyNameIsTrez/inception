@@ -26,6 +26,7 @@ VM password is `aabc`
 - `docker rm <CONTAINER ID>` to remove the container `7e`
 - `(docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q)) 2>/dev/null` stop all containers, remove all containers, remove all images, remove all volumes, remove all networks
 - `docker builder prune` to clear the build cache
+- `docker exec -it wordpress bash` to run the command `bash` in the running container `wordpress`
 
 # nginx
 
@@ -55,9 +56,11 @@ VM password is `aabc`
 
 - `docker compose --project-directory srcs up --build -d --remove-orphans`
 
-# Steps the inception tutorial didn't cover
+# Things the inception tutorial didn't cover
 
-Do the docker-compose first!! It is impossible to get mariadb/nginx/wordpress working individually!
+If you do this project, make the docker-compose first; it is virtually impossible to get mariadb/nginx/wordpress working individually in my experience!
+
+TODO: I decided not to call *any* .sh script, as we can just let the background daemons calls that we want to run in an infinite loop be run by the `Dockerfile` its `CMD`. We can use Docker's build-time `RUN` for everything else, so we don't need .sh scripts!
 
 1. Add `sbos` to the `sudo` group with `usermod -a -G sudo sbos`, and restart the VM for the change to take effect
 2. Install ssh and git with `sudo apt install openssh-server git`

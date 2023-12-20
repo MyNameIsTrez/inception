@@ -5,20 +5,17 @@ if [ -f "$HEALTHCHECK_FILE" ]; then
 	rm "$HEALTHCHECK_FILE"
 fi
 
-# envsubst fills it with the environment variables
+# envsubst fills the environment variables from start.sql
 # --bootstrap tells mariadbd to use its stdin
-# --bootstrap has a very different description here: https://mariadb.com/kb/en/mariadbd-options/#-bootstrap
-# TODO: Marius and Victor have --bind-address="mariadb" here!
+# --bootstrap has a very different description here?: https://mariadb.com/kb/en/mariadbd-options/#-bootstrap
 echo "Bootstrapping mariadbd"
 < /home/start.sql | envsubst | mariadbd --bind-address="mariadb" --bootstrap
-# < /home/start.sql | envsubst | mariadbd --bootstrap
 
 # We're creating this file after bootstrapping is done
 # to signal that the wordpress container can now start and use mariadb
+# The reason we don't need a healthcheck for wordpress is because nginx
+# will only access wordpress once a user requests a page
 touch "$HEALTHCHECK_FILE"
 
-# TODO: ADD THIS BACK!!!
-# TODO: Marius and Victor have --bind-address="mariadb" here!
 echo "Running mariadbd"
 mariadbd --bind-address="mariadb"
-# mariadbd
