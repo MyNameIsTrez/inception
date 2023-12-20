@@ -1,0 +1,58 @@
+services:
+  nginx:
+    # TODO: Try removing these three ./
+    build: ./requirements/nginx
+    container_name: nginx
+    depends_on:
+      - wordpress
+    restart: on-failure
+    volumes:
+      - wordpress_volume:/var/www/
+    ports:
+      - "443:443"
+    networks:
+      - inception
+    env_file:
+      - .env
+
+  wordpress:
+    build: ./requirements/wordpress
+    container_name: wordpress
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    restart: on-failure
+    volumes:
+      - wordpress_volume:/var/www/
+    networks:
+      - inception
+    env_file:
+      - .env
+
+  mariadb:
+    build: ./requirements/mariadb
+    container_name: mariadb
+    restart: on-failure
+    volumes:
+      - database_volume:/var/lib/mysql
+    networks:
+      - inception
+    env_file:
+      - .env
+
+networks:
+  inception:
+    name: inception
+
+volumes:
+  database_volume:
+    driver_opts:
+      o: bind
+      type: none
+      device: ${MARIADB_VOLUME}
+
+  wordpress_volume:
+    driver_opts:
+      o: bind
+      type: none
+      device: ${WORDPRESS_VOLUME}

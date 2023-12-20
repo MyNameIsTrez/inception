@@ -25,24 +25,42 @@ VM password is `aabc`
 - `sudo docker stop 7e` to stop the container `7e`
 - `sudo docker rm <CONTAINER ID>` to remove the container `7e`
 - `(docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q)) 2>/dev/null` stop all containers, remove all containers, remove all images, remove all volumes, remove all networks
-- `docker builder prune` to remove build cache
+- `docker builder prune` to clear the build cache
 
-# MariaDB
+# nginx
+
+- `sudo docker build -t nginx srcs/requirements/nginx/` to build the nginx container
+- `sudo docker run -it --rm nginx` to run the nginx container
+
+# mariadb
+
+- `sudo docker build -t mariadb srcs/requirements/mariadb/` to build the mariadb container
+- `sudo docker run -it --rm -e DB_USER="sbos" -e DB_PASSWORD="aabc" mariadb` to run the mariadb container
 
 - `mariadb -e "CREATE DATABASE IF NOT EXISTS FOO;"` creates a database `FOO`
 - `mariadb -u root` logs in as root in mariadb
-- `/etc/init.d/mariadb start` to manually run mariadb in the background
+- `/etc/init.d/mariadb start` or `mariadbd &` to manually run mariadb in the background
 - `show databases;` to list all databases
 - `show warnings;` right after a command that printed `1 warning` in order to view the warning
 
 # wordpress
 
+- `sudo docker build -t wordpress srcs/requirements/wordpress/` to build the wordpress container
+- `sudo docker run -it --rm wordpress` to run the wordpress container
+
 - `PAGER=cat /usr/local/bin/wp-cli-release.phar --allow-root` to show wp-cli's help list
 - `PAGER=cat /usr/local/bin/wp-cli-release.phar --allow-root --path="/var/www/wordpress" --dbname=wordpress --dbuser="wordpress" config create` to generate `wp-config.php`
 
+# docker compose
+
+- `sudo docker compose --project-directory srcs up --build -d --remove-orphans`
+
 # Steps the inception tutorial didn't cover
+
+Do the docker-compose first!! It is impossible to get mariadb/nginx/wordpress working individually!
 
 1. Add `sbos` to the `sudo` group with `usermod -a -G sudo sbos`, and restart the VM for the change to take effect
 2. Install ssh and git with `sudo apt install openssh-server git`
 3. Set the git username and email with `git config --global user.name "MyNameIsTrez"` and `git config --global user.email "welfje@gmail.com"`
-3. Need `events` and `http` directives in `nginx.conf`
+4. Install Docker for Debian by copying [these](https://docs.docker.com/engine/install/debian/) commands
+5. Need `events` and `http` directives in `nginx.conf`
