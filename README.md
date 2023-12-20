@@ -42,6 +42,7 @@ VM password is `aabc`
 
 # Steps the inception tutorial didn't cover
 
-1. Installing ssh with `usermod -a -G sudo sbos`, and restart the VM for the change to take effect
-2. Installing ssh with `apt install openssh-server`
-3. Needing `events` and `http` directives in `nginx.conf`
+1. Add `sbos` to the `sudo` group with `usermod -a -G sudo sbos`, and restart the VM for the change to take effect
+2. Install ssh and git with `sudo apt install openssh-server git`
+3. Set the git username and email with `git config --global user.name "MyNameIsTrez"` and `git config --global user.email "welfje@gmail.com"`
+3. Need `events` and `http` directives in `nginx.conf`
