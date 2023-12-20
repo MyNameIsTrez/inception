@@ -27,6 +27,7 @@ VM password is `aabc`
 - `(docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q)) 2>/dev/null` stop all containers, remove all containers, remove all images, remove all volumes, remove all networks
 - `docker builder prune` to clear the build cache
 - `docker exec -it wordpress bash` to run the command `bash` in the running container `wordpress`
+- `docker logs <CONTAINER ID>` to see why the container exited
 
 # nginx
 
@@ -54,7 +55,8 @@ VM password is `aabc`
 
 # docker compose
 
-- `docker compose --project-directory srcs up --build -d --remove-orphans`
+- `docker compose --project-directory srcs up --build -d --remove-orphans` to start up the containers
+- `docker compose --project-directory srcs down` to shut down the containers
 
 # Things the inception tutorial didn't cover
 

@@ -6,18 +6,20 @@ RUN apt install -y\
 	nginx\
 	openssl
 
-# This will store the certificate and key for a secure connection
-RUN mkdir -p /etc/nginx/ssl
+COPY conf/index.html /var/www/index.html
+COPY conf/nginx.conf /etc/nginx/sites-available/nginx.conf
 
-RUN openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout /etc/nginx/ssl/inception.key -subj "/C=NL/ST=Noord-Holland/L=Amsterdam/O=Codam/OU=Me/CN=sbos"
+RUN mkdir -p /var/www
 
-RUN mkdir -p /var/run/nginx
+# Removes everything in sites-enabled/
+# Forces symlink of sites-available/nginx.conf under the name sites-enabled/nginx.conf
+RUN rm -rf /etc/nginx/sites-enabled/* &&\
+	ln -sf /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf
 
-COPY conf/nginx.conf /etc/nginx/nginx.conf
-
-RUN chmod 755 /var/www/html
-# TODO: Try to remove this:
-RUN chown -R www-data:www-data /var/www/html
+# Generate the certificate and key for a secure connection
+# TODO: Marius has more command arguments here than I do; I might be missing some crucial ones here!
+RUN mkdir -p /etc/nginx/ssl &&\
+	openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout /etc/nginx/ssl/inception.key -subj "/C=NL/ST=Noord-Holland/L=Amsterdam/O=Codam/OU=Me/CN=sbos"
 
 EXPOSE 443
 

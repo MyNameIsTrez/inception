@@ -8,7 +8,7 @@ RUN apt install -y\
 	gettext-base
 
 # TODO: What is this for?
-RUN mkdir -p /var/run/mysqld; \
+RUN mkdir -p /var/run/mysqld;\
 	chmod 777 /var/run/mysqld /var/lib/mysql;
 
 # TODO: What is this for?
@@ -25,7 +25,7 @@ ENV HEALTHCHECK_FILE=/usr/health
 
 # Check 20 times, once per second, whether the file exists
 # `test -e <path>` exits with 0 if the file exists
-HEALTHCHECK --interval=1s --retries=20 \
+HEALTHCHECK --interval=1s --retries=20\
 	CMD test -e "$HEALTHCHECK_FILE"
 
 EXPOSE 3306
