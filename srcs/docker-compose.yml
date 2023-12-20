@@ -1,7 +1,6 @@
 services:
   nginx:
-    # TODO: Try removing these three ./
-    build: ./requirements/nginx
+    build: requirements/nginx
     container_name: nginx
     depends_on:
       - wordpress
@@ -16,7 +15,7 @@ services:
       - .env
 
   wordpress:
-    build: ./requirements/wordpress
+    build: requirements/wordpress
     container_name: wordpress
     depends_on:
       mariadb:
@@ -30,7 +29,7 @@ services:
       - .env
 
   mariadb:
-    build: ./requirements/mariadb
+    build: requirements/mariadb
     container_name: mariadb
     restart: on-failure
     volumes:

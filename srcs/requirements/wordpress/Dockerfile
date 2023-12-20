@@ -30,6 +30,17 @@ RUN chmod +x /usr/local/bin/wp-cli-release.phar
 # -p creates parent directories if necessary
 RUN mkdir -p /run/php
 
+# TODO: Do I need this?
+# RUN sed 's/listen = .*/listen = wordpress:9000/' -i /etc/php/7.4/fpm/pool.d/www.conf
+# RUN sed 's/;clear_env = no/clear_env = no/' -i /etc/php/7.4/fpm/pool.d/www.conf
+
+# TODO: Do I need this?
 # COPY conf/wp-config.php /var/www/wordpress/wp-config.php
 
 EXPOSE 9000
+
+# TODO: Do I need this?
+# COPY tools/init_wordpress.sh /usr/bin/init_wordpress.sh
+# RUN chmod 777 /usr/bin/init_wordpress.sh
+# ENTRYPOINT [ "init_wordpress.sh" ]
+# CMD [ "php-fpm7.4", "-F" ]
