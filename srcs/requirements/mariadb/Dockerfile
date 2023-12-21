@@ -2,7 +2,7 @@ FROM debian:oldstable
 
 RUN apt update -y && apt upgrade -y
 
-# gettext-base has envsubst
+# gettext-base brings the envsubst command
 RUN apt install -y\
 	mariadb-server\
 	gettext-base
@@ -17,8 +17,9 @@ RUN sed 's/bind-address .*/bind-address = mariadb/' -i /etc/mysql/mariadb.conf.d
 COPY tools/start.sh /home/start.sh
 COPY tools/start.sql /home/start.sql
 
-# TODO: Do I need to add this?
-# RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql
+# Connect mariadb with the database_volume /var/lib/mysql
+# we set up in docker-compose.yml
+RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql
 
 # It's an environment variable since start.sh also uses it
 ENV HEALTHCHECK_FILE=/usr/health

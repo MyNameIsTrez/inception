@@ -41,9 +41,11 @@ VM password is `aabc`
 - `docker run -it --rm -e DB_USER="sbos" -e DB_PASSWORD="aabc" mariadb` to run the mariadb container
 
 - `mariadb -e "CREATE DATABASE IF NOT EXISTS FOO;"` creates a database `FOO`
-- `mariadb -u root` logs in as root in mariadb
+- `mariadb --password=aabc;` to log in as the root
 - `/etc/init.d/mariadb start` or `mariadbd &` to manually run mariadb in the background
 - `show databases;` to list all databases
+- `use wordpress;` tells MariaDB to use the `wordpress` database as the default (current) database for subsequent statements
+- `show tables;` lists the tables, sequences and views in the currently used database
 - `show warnings;` right after a command that printed `1 warning` in order to view the warning
 
 # wordpress

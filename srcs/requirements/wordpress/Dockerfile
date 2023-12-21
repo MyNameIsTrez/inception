@@ -8,6 +8,8 @@ RUN apt install -y\
 	php7.4-mysql\
 	mariadb-client
 
+COPY tools/start.sh /home/start.sh
+
 # Download wordpress
 ADD https://wordpress.org/wordpress-6.4.2.tar.gz /var/www/wordpress.tar.gz
 
@@ -15,7 +17,7 @@ ADD https://wordpress.org/wordpress-6.4.2.tar.gz /var/www/wordpress.tar.gz
 RUN tar -xzf /var/www/wordpress.tar.gz -C /var/www/
 
 # Remove wordpress tar
-RUN rm -rf /var/www/wordpress.tar.gz
+RUN rm /var/www/wordpress.tar.gz
 
 # Recursively change owner:group from nobody:nogroup to root:root of wordpress
 RUN chown -R root:root /var/www/wordpress
@@ -39,9 +41,6 @@ RUN sed 's/listen = .*/listen = wordpress:9000/' -i /etc/php/7.4/fpm/pool.d/www.
 # This sed command is turning this comment into an executed line
 RUN sed 's/;clear_env = no/clear_env = no/' -i /etc/php/7.4/fpm/pool.d/www.conf
 
-COPY conf/wp-config.php /var/www/wordpress/wp-config.php
-
 EXPOSE 9000
 
-COPY tools/start.sh /home/start.sh
 CMD [ "/home/start.sh" ]
