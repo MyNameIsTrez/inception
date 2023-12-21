@@ -28,6 +28,7 @@ VM password is `aabc`
 - `docker builder prune` to clear the build cache
 - `docker exec -it wordpress bash` to run the command `bash` in the running container `wordpress`
 - `docker logs <CONTAINER ID>` to see why the container exited
+- `docker inspect <CONTAINER ID` to get detailed information about why Docker might have killed the process, like `"OOMKilled": true"` if you exceed the container memory limits and Docker kills your app
 
 # nginx
 
@@ -70,3 +71,4 @@ TODO: I decided not to call *any* .sh script, as we can just let the background 
 4. Install Docker for Debian by copying [these](https://docs.docker.com/engine/install/debian/) commands
 5. Allow the user `sbos` to run docker commands without sudo by running `sudo groupadd docker` if the docker group doesn't exist yet, and `sudo gpasswd -a $USER docker` to add sbos to the docker group. You need to restart the VM for `groups` to reflect the change, and for docker to work without `sudo`
 6. Need `events` and `http` directives in `nginx.conf`
+7. Need `sudo apt install make`
