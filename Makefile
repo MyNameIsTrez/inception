@@ -20,6 +20,11 @@ up:
 down:
 	docker compose --project-directory $(PROJECT_DIR) down
 
+# `--insecure` is necessary to circumvent curl's self-signed certificate error
+.PHONE: connect
+connect:
+	curl --insecure https://localhost
+
 # $$ is an escaped $, and it gives sh, rather than Make, the chance to expand it
 # 2> /dev/null ignores errors when $$(docker ps -qa) expands to an empty result
 # Likewise, || exit 0 makes sure Make doesn't report an error
