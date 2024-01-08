@@ -53,8 +53,9 @@ VM password is `aabc`
 - `docker build -t wordpress srcs/requirements/wordpress/` to build the wordpress container
 - `docker run -it --rm wordpress` to run the wordpress container
 
-- `PAGER=cat /usr/local/bin/wp-cli-release.phar --allow-root` to show wp-cli's help list
-- `PAGER=cat /usr/local/bin/wp-cli-release.phar --allow-root --path="/var/www/wordpress" --dbname=wordpress --dbuser="wordpress" config create` to generate `wp-config.php`
+- `PAGER=cat /usr/local/bin/wp-cli.phar --allow-root` to show wp-cli's help list
+- `PAGER=cat /usr/local/bin/wp-cli.phar --allow-root --path="/var/www/wordpress" --dbhost="mariadb" --dbname=wordpress --dbuser="sbos" --dbpass="aabc" config create` to generate `wp-config.php`
+- `find -type s` to list all sockets
 
 # docker compose
 

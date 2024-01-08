@@ -3,9 +3,12 @@ FROM debian:oldstable
 RUN apt update -y && apt upgrade -y
 
 # gettext-base brings the envsubst command
+# TODO: Try removing openssh-server from here, since the wordpress container already has it
+# openssh-server is needed for wp-cli's config create
 RUN apt install -y\
 	mariadb-server\
-	gettext-base
+	gettext-base\
+	openssh-server
 
 # TODO: What is this for?
 RUN mkdir -p /var/run/mysqld;\
@@ -13,9 +16,6 @@ RUN mkdir -p /var/run/mysqld;\
 
 # TODO: What is this for?
 RUN sed 's/bind-address .*/bind-address = mariadb/' -i /etc/mysql/mariadb.conf.d/50-server.cnf
-
-COPY tools/start.sh /home/start.sh
-COPY tools/start.sql /home/start.sql
 
 # Connect mariadb with the database_volume /var/lib/mysql
 # we set up in docker-compose.yml
@@ -31,4 +31,6 @@ HEALTHCHECK --interval=1s --retries=20\
 
 EXPOSE 3306
 
+COPY tools/start.sh /home/start.sh
+COPY tools/start.sql /home/start.sql
 CMD [ "/home/start.sh" ]

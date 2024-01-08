@@ -6,7 +6,6 @@ RUN apt install -y\
 	nginx\
 	openssl
 
-COPY conf/index.html /var/www/index.html
 COPY conf/nginx.conf /etc/nginx/sites-available/nginx.conf
 
 RUN mkdir -p /var/www
