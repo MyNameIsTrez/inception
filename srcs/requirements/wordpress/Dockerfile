@@ -18,11 +18,13 @@ RUN tar -xzf /var/www/wordpress.tar.gz -C /var/www/
 
 RUN mv /var/www/wordpress/* /var/www/
 
+RUN rmdir /var/www/wordpress
+
 # Remove wordpress tar
 RUN rm /var/www/wordpress.tar.gz
 
 # Recursively change owner:group from nobody:nogroup to root:root of wordpress
-RUN chown -R root:root /var/www/wordpress
+RUN chown -R root:root /var/www/
 
 # Download wp-cli PHP Archive to /usr/local/bin/
 ADD https://raw.githubusercontent.com/wp-cli/builds/3e345df698faea02d64baebcb2fa6fc523231494/phar/wp-cli-release.phar /usr/local/bin/wp-cli.phar
