@@ -21,6 +21,6 @@ echo "Running wp user create"
 wp user create "$WP_USER_NAME" "$WP_USER_EMAIL" --role=contributor --user_pass="$WP_USER_PASSWORD"
 fi
 
-# --nodaemonize forces staying in the foreground
 echo "Running php-fpm"
+# --nodaemonize forces staying in the foreground
 php-fpm7.4 --nodaemonize

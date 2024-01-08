@@ -3,18 +3,15 @@ FROM debian:oldstable
 RUN apt update -y && apt upgrade -y
 
 # gettext-base brings the envsubst command
-# TODO: Try removing openssh-server from here, since the wordpress container already has it
-# openssh-server is needed for wp-cli's config create
 RUN apt install -y\
 	mariadb-server\
-	gettext-base\
-	openssh-server
+	gettext-base
 
-# TODO: What is this for?
+# Not sure what this does, but removing it breaks mariadb
 RUN mkdir -p /var/run/mysqld;\
 	chmod 777 /var/run/mysqld /var/lib/mysql;
 
-# TODO: What is this for?
+# Allows wordpress to connect using the name mariadb
 RUN sed 's/bind-address .*/bind-address = mariadb/' -i /etc/mysql/mariadb.conf.d/50-server.cnf
 
 # Connect mariadb with the database_volume /var/lib/mysql

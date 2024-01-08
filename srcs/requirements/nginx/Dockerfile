@@ -16,9 +16,14 @@ RUN rm -rf /etc/nginx/sites-enabled/* &&\
 	ln -sf /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf
 
 # Generate the certificate and key for a secure connection
-# TODO: Marius has more command arguments here than I do; I might be missing some crucial ones here!
 RUN mkdir -p /etc/nginx/ssl &&\
-	openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout /etc/nginx/ssl/inception.key -subj "/C=NL/ST=Noord-Holland/L=Amsterdam/O=Codam/OU=Me/CN=sbos"
+	openssl req\
+	-x509\
+	-nodes\
+	-out\
+	/etc/nginx/ssl/inception.crt\
+	-keyout /etc/nginx/ssl/inception.key\
+	-subj "/C=NL/ST=Noord-Holland/L=Amsterdam/O=Codam/OU=Me/CN=sbos"
 
 EXPOSE 443
 

@@ -66,8 +66,6 @@ VM password is `aabc`
 
 If you do this project, make the docker-compose first; it is virtually impossible to get mariadb/nginx/wordpress working individually in my experience!
 
-TODO: I decided not to call *any* .sh script, as we can just let the background daemons calls that we want to run in an infinite loop be run by the `Dockerfile` its `CMD`. We can use Docker's build-time `RUN` for everything else, so we don't need .sh scripts!
-
 1. Add `sbos` to the `sudo` group with `usermod -a -G sudo sbos`, and restart the VM for the change to take effect
 2. Install ssh and git with `sudo apt install openssh-server git`
 3. Set the git username and email with `git config --global user.name "MyNameIsTrez"` and `git config --global user.email "welfje@gmail.com"`
