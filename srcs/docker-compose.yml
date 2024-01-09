@@ -1,6 +1,18 @@
 services:
+  mariadb:
+    build: requirements/mariadb
+    image: mariadb
+    container_name: mariadb
+    restart: on-failure
+    volumes:
+      - mariadb_volume:/var/lib/mysql
+    networks:
+      - inception
+    env_file: .env
+
   nginx:
     build: requirements/nginx
+    image: nginx
     container_name: nginx
     depends_on:
       - wordpress
@@ -15,6 +27,7 @@ services:
 
   wordpress:
     build: requirements/wordpress
+    image: wordpress
     container_name: wordpress
     depends_on:
       mariadb:
@@ -26,22 +39,12 @@ services:
       - inception
     env_file: .env
 
-  mariadb:
-    build: requirements/mariadb
-    container_name: mariadb
-    restart: on-failure
-    volumes:
-      - database_volume:/var/lib/mysql
-    networks:
-      - inception
-    env_file: .env
-
 networks:
   inception:
     name: inception
 
 volumes:
-  database_volume:
+  mariadb_volume:
     driver_opts:
       o: bind
       type: none
