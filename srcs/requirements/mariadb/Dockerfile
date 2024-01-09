@@ -26,8 +26,6 @@ ENV HEALTHCHECK_FILE=/usr/health
 HEALTHCHECK --interval=1s --retries=20\
 	CMD test -e "$HEALTHCHECK_FILE"
 
-EXPOSE 3306
-
 COPY tools/start.sh /home/start.sh
 COPY tools/start.sql /home/start.sql
 CMD [ "/home/start.sh" ]

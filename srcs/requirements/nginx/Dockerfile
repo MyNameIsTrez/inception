@@ -25,7 +25,5 @@ RUN mkdir -p /etc/nginx/ssl &&\
 	-keyout /etc/nginx/ssl/inception.key\
 	-subj "/C=NL/ST=Noord-Holland/L=Amsterdam/O=Codam/OU=Me/CN=sbos"
 
-EXPOSE 443
-
 # Run nginx in the foreground so the container doesn't stop
 CMD [ "nginx", "-g", "daemon off;" ]

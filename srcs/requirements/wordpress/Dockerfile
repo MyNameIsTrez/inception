@@ -41,7 +41,5 @@ RUN sed 's/listen = .*/listen = wordpress:9000/' -i /etc/php/7.4/fpm/pool.d/www.
 # This sed command is turning this comment into an executed line
 RUN sed 's/;clear_env = no/clear_env = no/' -i /etc/php/7.4/fpm/pool.d/www.conf
 
-EXPOSE 9000
-
 COPY tools/start.sh /home/start.sh
 CMD [ "/home/start.sh" ]
