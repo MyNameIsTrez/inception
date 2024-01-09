@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This lets the script exit if any command fails
+set -e
+
 if [ -f "$HEALTHCHECK_FILE" ]; then
 	echo "Healthchech file already exists, removing it"
 	rm "$HEALTHCHECK_FILE"

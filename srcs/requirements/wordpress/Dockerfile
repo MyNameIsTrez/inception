@@ -25,10 +25,10 @@ RUN rm /var/www/wordpress.tar.gz
 RUN chown -R root:root /var/www/
 
 # Download wp-cli PHP Archive to /usr/local/bin/
-ADD https://raw.githubusercontent.com/wp-cli/builds/3e345df698faea02d64baebcb2fa6fc523231494/phar/wp-cli-release.phar /usr/local/bin/wp-cli.phar
+ADD https://raw.githubusercontent.com/wp-cli/builds/3e345df698faea02d64baebcb2fa6fc523231494/phar/wp-cli-release.phar /usr/local/bin/wp-cli
 
 # Allow executing wp-cli
-RUN chmod +x /usr/local/bin/wp-cli.phar
+RUN chmod +x /usr/local/bin/wp-cli
 
 # Prevents this error:
 # "ERROR: Unable to create the PID file (/run/php/php7.4-fpm.pid).: No such file or directory"
