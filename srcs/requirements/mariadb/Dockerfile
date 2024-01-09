@@ -2,7 +2,7 @@ FROM debian:oldstable
 
 RUN apt update -y && apt upgrade -y
 
-# gettext-base brings the envsubst command
+# gettext-base provides the envsubst command
 RUN apt install -y\
 	mariadb-server\
 	gettext-base

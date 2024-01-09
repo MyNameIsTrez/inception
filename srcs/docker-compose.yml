@@ -11,8 +11,7 @@ services:
       - "443:443"
     networks:
       - inception
-    env_file:
-      - .env
+    env_file: .env
 
   wordpress:
     build: requirements/wordpress
@@ -25,8 +24,7 @@ services:
       - wordpress_volume:/var/www/
     networks:
       - inception
-    env_file:
-      - .env
+    env_file: .env
 
   mariadb:
     build: requirements/mariadb
@@ -36,8 +34,7 @@ services:
       - database_volume:/var/lib/mysql
     networks:
       - inception
-    env_file:
-      - .env
+    env_file: .env
 
 networks:
   inception:
