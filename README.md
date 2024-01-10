@@ -47,6 +47,7 @@ VM password is `aabc`
 - `use wordpress;` tells MariaDB to use the `wordpress` database as the default (current) database for subsequent statements
 - `show tables;` lists the tables, sequences and views in the currently used database
 - `show warnings;` right after a command that printed `1 warning` in order to view the warning
+- `select * from wp_users;` to show all rows of the table `wp_users`
 
 # wordpress
 
