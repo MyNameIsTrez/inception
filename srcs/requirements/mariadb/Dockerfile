@@ -18,14 +18,6 @@ RUN sed 's/bind-address .*/bind-address = mariadb/' -i /etc/mysql/mariadb.conf.d
 # we set up in docker-compose.yml
 RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql
 
-# It's an environment variable since start.sh also uses it
-ENV HEALTHCHECK_FILE=/usr/health
-
-# Check 20 times, once per second, whether the file exists
-# `test -e <path>` exits with 0 if the file exists
-HEALTHCHECK --interval=1s --retries=20\
-	CMD test -e "$HEALTHCHECK_FILE"
-
 COPY tools/start.sh /home/start.sh
 COPY tools/start.sql /home/start.sql
 CMD [ "/home/start.sh" ]
