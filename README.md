@@ -1,16 +1,20 @@
 # inception
 
+## VM login information
+
 VM username is `sbos`
 VM password is `aabc`
 
-[inception tutorial](https://tuto.grademe.fr/inception/#)
-[vbenneko's inception](https://github.com/adfhjl/Inception)
-[mivw's inception](https://github.com/42-mvan-wij/Inception/blob/master/srcs/docker-compose.yml)
-[Don't use the Docker group, use sudo](https://fosterelli.co/privilege-escalation-via-docker.html)
-[/usr/local/bin/ rather than /usr/bin/ because future distribution upgrades may modify or delete them without warning](https://unix.stackexchange.com/a/8658)
-[wp config command documentation for wp-config.php](https://github.com/wp-cli/config-command)
+## Links
 
-# Docker commands
+- [inception tutorial](https://tuto.grademe.fr/inception/#)
+- [vbenneko's inception](https://github.com/adfhjl/Inception)
+- [mivw's inception](https://github.com/42-mvan-wij/Inception/blob/master/srcs/docker-compose.yml)
+- [Don't use the Docker group, use sudo](https://fosterelli.co/privilege-escalation-via-docker.html)
+- [/usr/local/bin/ rather than /usr/bin/ because future distribution upgrades may modify or delete them without warning](https://unix.stackexchange.com/a/8658)
+- [wp config command documentation for wp-config.php](https://github.com/wp-cli/config-command)
+
+## Docker commands
 
 - `Ctrl + P + Q` detaches from a container
 
@@ -30,12 +34,12 @@ VM password is `aabc`
 - `docker logs <CONTAINER ID>` to see why the container exited
 - `docker inspect <CONTAINER ID` to get detailed information about why Docker might have killed the process, like `"OOMKilled": true"` if you exceed the container memory limits and Docker kills your app
 
-# nginx
+## nginx
 
 - `docker build -t nginx srcs/requirements/nginx/` to build the nginx container
 - `docker run -it --rm nginx` to run the nginx container
 
-# mariadb
+## mariadb
 
 - `docker build -t mariadb srcs/requirements/mariadb/` to build the mariadb container
 - `docker run -it --rm -e DB_USER="sbos" -e DB_PASSWORD="aabc" mariadb` to run the mariadb container
@@ -49,7 +53,7 @@ VM password is `aabc`
 - `show warnings;` right after a command that printed `1 warning` in order to view the warning
 - `select * from wp_users;` to show all rows of the table `wp_users`
 
-# wordpress
+## wordpress
 
 - `docker build -t wordpress srcs/requirements/wordpress/` to build the wordpress container
 - `docker run -it --rm wordpress` to run the wordpress container
@@ -58,12 +62,12 @@ VM password is `aabc`
 - `PAGER=cat /usr/local/bin/wp-cli.phar --allow-root --path="/var/www/wordpress" --dbhost="mariadb" --dbname=wordpress --dbuser="sbos" --dbpass="aabc" config create` to generate `wp-config.php`
 - `find -type s` to list all sockets
 
-# docker compose
+## docker compose
 
 - `docker compose --project-directory srcs up --build -d --remove-orphans` to start up the containers
 - `docker compose --project-directory srcs down` to shut down the containers
 
-# Things the inception tutorial didn't cover
+## Things the inception tutorial didn't cover
 
 If you do this project, make the docker-compose first; it is virtually impossible to get mariadb/nginx/wordpress working individually in my experience!
 
